@@ -7,34 +7,29 @@ cono = 0
 vaso = 0
 banana = 0
 
-while True:
+producto = input("Producto (cono, vaso, banana, salir): ")
 
-    producto = input("Ingrese producto (cono, vaso, banana) o 'salir': ")
+while producto != "salir":
 
-    if producto == "salir":
-        break
-
-    cantidad = int(input("Ingrese cantidad: "))
+    cantidad = int(input("Cantidad: "))
 
     if producto == "cono":
-        precio = 3000
-        cono = cono + cantidad
+        total_vendido += 3000 * cantidad
+        cono += cantidad
 
     elif producto == "vaso":
-        precio = 4000
-        vaso = vaso + cantidad
+        total_vendido += 4000 * cantidad
+        vaso += cantidad
 
     elif producto == "banana":
-        precio = 9000
-        banana = banana + cantidad
+        total_vendido += 9000 * cantidad
+        banana += cantidad
 
     else:
         print("Producto no válido")
-        continue
 
-    total = precio * cantidad
-    total_vendido = total_vendido + total
-    clientes = clientes + 1
+    clientes += 1
+    producto = input("Producto (cono, vaso, banana, salir): ")
 
 print("Total vendido:", total_vendido)
 print("Clientes atendidos:", clientes)
@@ -44,4 +39,4 @@ if cono > vaso and cono > banana:
 elif vaso > banana:
     print("Producto más pedido: vaso")
 else:
-    print("Producto más pedido: banana split")
+    print("Producto más pedido: banana")
