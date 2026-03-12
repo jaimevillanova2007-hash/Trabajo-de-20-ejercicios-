@@ -15,7 +15,7 @@ cantidad = int(input("Ingrese la cantidad del producto: "))
 costo_total = precio * cantidad
 
 # Mostrar resultados
-print("\n----- RESULTADO DEL INVENTARIO -----")
+print("\n- RESULTADO DEL INVENTARIO -")
 print("Producto:", nombre)
 print("Precio unitario:", precio)
 print("Cantidad:", cantidad)
